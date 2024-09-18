@@ -2,7 +2,7 @@ import java.util.LinkedHashSet;
 import java.util.HashSet;
 
 
-public class Set {
+public class Main {
     public static void main(String[] args){
 
 
@@ -28,9 +28,9 @@ public class Set {
 
         boolean equal = orderedDays.equals(days);
         if(equal){
-            System.out.println("\t is week is equal to week2 ");
+            System.out.println("\t days is equal to orderedDays ");
         }else{
-            System.out.println("\t is week is not equal to week2 ");
+            System.out.println("\t is days is not equal to orderedDays ");
         }
 
 
