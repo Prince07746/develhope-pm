@@ -28,9 +28,9 @@ public class Main {
 
         boolean equal = orderedDays.equals(days);
         if(equal){
-            System.out.println("\t is week is equal to week2 ");
+            System.out.println("\t days is equal to orderedDays ");
         }else{
-            System.out.println("\t is week is not equal to week2 ");
+            System.out.println("\t is days is not equal to orderedDays ");
         }
 
 
