@@ -16,7 +16,7 @@ public class Set {
         week.add("Sunday");
         System.out.println("\t Week Hash Set: "+week);
 
-        HashSet<String> week2 = new LinkedHashSet<>();
+        LinkedHashSet<String> week2 = new LinkedHashSet<>();
         week2.add("Monday");
         week2.add("Tuesday");
         week2.add("Wednesday");
