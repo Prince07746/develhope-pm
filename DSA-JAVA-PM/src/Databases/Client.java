@@ -66,11 +66,11 @@ public class Client {
                     for (User user : users) {
                         formater.append(user.getName() + ",").append(user.getLastName() + ",").append(user.getStatus() + "\n");
                     }
-                    formater.append(name + ",").append(lastName + ",").append(status + "\n");
+                   formater.append(name + ",").append(lastName + ",").append(status + "\n");
 
                     writer.write(formater.toString());
                     writer.close();
-                    System.out.println("\t db ... done");
+                    System.out.println("\t user registered");
                     formater.delete(0,formater.length());
                     users.clear();
                 }
