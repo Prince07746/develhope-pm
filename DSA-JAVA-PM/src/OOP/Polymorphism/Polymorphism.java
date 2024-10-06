@@ -18,7 +18,7 @@ public class Polymorphism {
 
 class Animal{
     // an instance variable animalName
-    String animaName;
+    private String animaName;
     // the constructor of animal
     public Animal(String animalName){
         this.animaName = animalName;
@@ -27,6 +27,9 @@ class Animal{
         System.out.println( animaName+" make sound");
     }
 
+    public String getAnimaName() {
+        return animaName;
+    }
 }
 
 class Lion extends Animal{
@@ -36,7 +39,7 @@ class Lion extends Animal{
   }
   @Override
     public void animalSound(){
-      System.out.println(animaName+" roars");
+      System.out.println(getAnimaName()+" roars");
   }
 }
 class Cow extends Animal{
@@ -46,6 +49,6 @@ class Cow extends Animal{
   }
     @Override
     public void animalSound(){
-        System.out.println(animaName+" moos");
+        System.out.println(getAnimaName()+" moos");
     }
 }
