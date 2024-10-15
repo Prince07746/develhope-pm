@@ -1,2 +1,2 @@
-prince,david,USER
-wafi,sept,USER
+prince,prince,USER
+hana,hana,USER
