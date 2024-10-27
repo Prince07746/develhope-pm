@@ -27,11 +27,11 @@ abstract public class BankAccount implements Serializable {
         this.balance = balance;
     }
 
-    abstract public double withdraw(double amount);
-    abstract public double deposit(double amount);
+    abstract public double withdraw(int accountNumber,double amount);
+    abstract public double deposit(int accountNumber,double amount);
 
     public String formatter() {
-        return getBalance() + "," + getAccountNumber();
+        return getBalance() + "," + getAccountNumber()+"\n";
     }
 
 }

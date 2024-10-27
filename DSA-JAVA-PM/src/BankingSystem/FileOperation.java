@@ -17,23 +17,46 @@ public class FileOperation {
     // Save account to file
     public void saveAccount(BankAccount account) {
 
-        ArrayList<BankAccount> accounts = new ArrayList<>();
-
+        ArrayList<SavingsAccount> accounts = new ArrayList<>();
+        StringBuilder formatter = new StringBuilder();
         try(FileReader reader = new FileReader(fileName)) {
             Scanner scanner = new Scanner(reader);
 
-
+            while (scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                String[] splitedLine = line.split(",");
+                accounts.add(new SavingsAccount(Integer.parseInt(splitedLine[0]),Double.parseDouble(splitedLine[1])));
+            }
 
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
 
+       if(!accounts.isEmpty()){
+           boolean isThere = false;
+           for(SavingsAccount account1:accounts){
+               if(account.equals(account1)){
+                   account1.setBalance(account.getBalance());
+                   account1.setAccountNumber(account.getAccountNumber());
+                   isThere = true;
+               }
+           }
+           if(isThere){
+               System.out.println("\t account updated successfully");
+           }else{
+               accounts.add(new SavingsAccount(account.getAccountNumber(),account.getBalance()));
+               System.out.println("\t new Account saved successfully");
+           }
+       }
+
 
 
        try(FileWriter writer = new FileWriter(fileName)) {
-
-           writer.write(account.formatter());
-
+           for(SavingsAccount acc:accounts){
+               formatter.append(acc.formatter());
+           }
+           writer.write(formatter.toString());
+           System.out.println("\t Webale");
        } catch (IOException e){
            System.out.println(e.getMessage());
        }

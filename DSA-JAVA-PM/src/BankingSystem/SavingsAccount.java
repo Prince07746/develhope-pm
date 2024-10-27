@@ -1,7 +1,9 @@
 package BankingSystem;
+import java.util.ArrayList;
+
 
 public class SavingsAccount extends BankAccount {
-
+    FileOperation file = new FileOperation("Account.csv");
     private double limitWithdraw;
     private double limitOverDraft;
 
@@ -13,11 +15,13 @@ public class SavingsAccount extends BankAccount {
     }
 
     @Override
-    public double withdraw(double amount){
-         return 0;
+    public double withdraw(int accountNumber ,double amount){
+        ArrayList<BankAccount> accounts = file.loadAccount();
+
+
     }
     @Override
-    public double deposit(double amount) {
+    public double deposit(int accountNumber, double amount) {
         setBalance(amount);
         return getBalance();
     }
