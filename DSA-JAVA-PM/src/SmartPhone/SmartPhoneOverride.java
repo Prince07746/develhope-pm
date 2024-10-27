@@ -50,7 +50,7 @@ class SmartPhone implements Cloneable {
     }
 
    @Override
-    protected Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException{
         return super.clone();
    }
 }
@@ -58,3 +58,5 @@ class SmartPhone implements Cloneable {
 class SmartphonePrice{
 
 }
+
+
