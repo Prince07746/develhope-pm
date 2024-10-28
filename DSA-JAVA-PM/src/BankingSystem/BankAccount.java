@@ -24,13 +24,16 @@ abstract public class BankAccount implements Serializable {
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        this.balance += balance;
+    }
+    public void setBalanceWithdraw(double balance) {
+        this.balance -= balance;
     }
 
     abstract public double withdraw(int accountNumber,double amount);
     abstract public double deposit(int accountNumber,double amount);
 
-    public String formatter() {
+    public String formater() {
         return getBalance() + "," + getAccountNumber()+"\n";
     }
 
