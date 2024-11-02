@@ -1,2 +1,0 @@
-prince,prince,USER
-hana,hana,USER
